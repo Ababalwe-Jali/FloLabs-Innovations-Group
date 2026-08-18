@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" role="img" aria-labelledby="title desc">
+  <title id="title">Animal vocalization research concept</title>
+  <desc id="desc">Acoustic waveform analysis with signal nodes and machine learning patterns.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#17131D"/>
+      <stop offset="0.55" stop-color="#10201A"/>
+      <stop offset="1" stop-color="#030405"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="56%" cy="42%" r="55%">
+      <stop offset="0" stop-color="#CFFE25" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#CFFE25" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="750" fill="url(#bg)"/>
+  <rect width="1200" height="750" fill="url(#glow)"/>
+  <g fill="none" stroke="#ffffff" stroke-opacity="0.08">
+    <path d="M0 150h1200M0 300h1200M0 450h1200M0 600h1200"/>
+    <path d="M150 0v750M300 0v750M450 0v750M600 0v750M750 0v750M900 0v750M1050 0v750"/>
+  </g>
+  <path d="M80 376c62 0 62-124 124-124s62 248 124 248 62-184 124-184 62 120 124 120 62-248 124-248 62 312 124 312 62-190 124-190 62 66 124 66" fill="none" stroke="#CFFE25" stroke-width="12" stroke-linecap="round"/>
+<path d="M80 376c62 0 62-72 124-72s62 142 124 142 62-104 124-104 62 68 124 68 62-146 124-146 62 184 124 184 62-112 124-112 62 40 124 40" fill="none" stroke="#D8F7D6" stroke-opacity="0.65" stroke-width="5" stroke-linecap="round"/>
+<g transform="translate(476 164)"><circle cx="124" cy="146" r="96" fill="#0D0D10" stroke="#FFFFFF" stroke-opacity="0.12"/><path d="M82 170c36 24 78 24 116 0" fill="none" stroke="#CFFE25" stroke-width="10" stroke-linecap="round"/><circle cx="92" cy="128" r="12" fill="#D8F7D6"/><circle cx="156" cy="128" r="12" fill="#D8F7D6"/><path d="M58 82 30 48M190 82l28-34" stroke="#CFFE25" stroke-width="10" stroke-linecap="round"/></g>
+</svg>

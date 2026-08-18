@@ -1,0 +1,354 @@
+/* ============================================
+   OUR FOCUS PAGE — premium editorial redesign
+   ============================================ */
+
+.focus-open {
+  background: url("../Assets/our-focus-hero.png") center center / cover no-repeat;
+  padding: 168px 0 var(--sp-10);
+}
+.focus-open__title {
+  font-size: 90px;
+  text-transform: uppercase;
+  margin: var(--sp-5) 0 var(--sp-7);
+  max-width: 18ch;
+}
+
+.hero__headline-outline {
+  -webkit-text-stroke: 1.5px var(--white);
+  color: transparent;
+}
+
+.focus-open__lead {
+  font-family: "Plus Jakarta" sans-serif;
+  font-size: 24px;
+  color: var(--grey-medium-light);
+  max-width: 58ch;
+}
+
+/* ---- Sticky domain rail ---- */
+.domain-rail {
+  position: sticky;
+  top: 88px;
+  z-index: var(--z-sticky);
+  background: var(--nav-glass);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-top: var(--border-thin);
+  border-bottom: var(--border-thin);
+}
+.domain-rail__inner {
+  display: flex;
+  gap: var(--sp-9);
+  overflow-x: auto;
+}
+.domain-rail__link {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: var(--sp-4) 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--grey-medium-light);
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+  transition: color var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out);
+}
+.domain-rail__link span {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  color: var(--grey-steel);
+}
+.domain-rail__link:hover {
+  color: var(--white);
+  border-color: var(--glass-20);
+}
+
+/* ---- Shared domain content column ---- */
+.domain {
+  padding: var(--section-gap) 0;
+  border-bottom: var(--border-thin);
+}
+
+.domain__num {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--grey-medium-light);
+  display: block;
+  margin-bottom: var(--sp-4);
+}
+.domain__content h2 { font-size: var(--fs-h1); margin-bottom: var(--sp-4); }
+.domain__lead {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1.3rem;
+  margin-bottom: var(--sp-6);
+  max-width: 30ch;
+}
+.domain__text {
+  color: #cbd5e1;
+  font-size: 20px;
+  line-height: 1.55;
+  max-width: 54ch;
+  margin-bottom: var(--sp-7);
+}
+.domain__facts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-6);
+  margin: 0 0 var(--sp-7);
+  border-top: var(--border-thin-strong);
+  padding-top: var(--sp-6);
+}
+.domain__facts dt {
+  font-size: var(--fs-caption);
+  color: var(--white);
+  font-weight: 600;
+  margin-bottom: var(--sp-2);
+}
+.domain__facts dd {
+  margin: 0;
+  color: var(--grey-medium-light);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+@media (max-width: 900px) {
+  .domain__facts { grid-template-columns: 1fr; }
+}
+
+/* ============================================
+   01 EDUCATION — editorial split, floating callout
+   ============================================ */
+
+.domain-edu__grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: var(--sp-13);
+  align-items: center;
+}
+
+.domain-edu__media {
+  position: relative;
+  aspect-ratio: 4 / 5;
+}
+.domain-edu__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+.domain-edu__callout {
+  position: absolute;
+  left: calc(-1 * var(--sp-8));
+  bottom: calc(-1 * var(--sp-7));
+  width: 220px;
+  background: var(--charcoal);
+  border: var(--border-thin-strong);
+  padding: var(--sp-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+.domain-edu__callout-num {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--grey-medium-light);
+}
+.domain-edu__callout p { font-size: 0.9rem; line-height: 1.4; }
+
+@media (max-width: 900px) {
+  .domain-edu__grid { grid-template-columns: 1fr; gap: var(--sp-10); }
+  .domain-edu__media { max-width: 420px; margin: 0 auto; }
+  .domain-edu__callout { left: var(--sp-4); bottom: calc(-1 * var(--sp-6)); width: calc(100% - var(--sp-8)); }
+}
+@media (max-width: 560px) {
+  .domain-edu__callout { position: static; width: 100%; margin-top: var(--sp-5); }
+}
+
+/* ============================================
+   02 HEALTHCARE — full-bleed immersive banner
+   ============================================ */
+
+.domain-health {
+  position: relative;
+  min-height: 720px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  border-bottom: var(--border-thin);
+}
+.domain-health__media { position: absolute; inset: 0; z-index: 0; }
+.domain-health__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+.domain-health__scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(4,6,14,0.35) 0%, rgba(4,6,14,0.55) 45%, rgba(4,6,14,0.92) 100%);
+}
+.domain-health__inner {
+  position: relative;
+  z-index: 1;
+  padding-bottom: var(--sp-13);
+  padding-top: var(--sp-20);
+}
+.domain-health h2 { font-size: var(--fs-h1); margin-bottom: var(--sp-4); }
+.domain-health__lead { max-width: 34ch; }
+.domain-health__text { max-width: 58ch; color: var(--grey-light); }
+.domain-health__callout {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-4);
+  border: var(--border-thin-strong);
+  background: rgba(10,10,10,0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: var(--sp-4) var(--sp-5);
+  max-width: 56ch;
+  flex-wrap: wrap;
+}
+.domain-health__callout p { color: var(--grey-light); font-size: 0.9rem; margin: 0; }
+
+@media (max-width: 700px) {
+  .domain-health { min-height: 640px; }
+  .domain-health__inner { padding-top: var(--sp-13); }
+}
+
+/* ============================================
+   03 TRAVEL — asymmetric collage
+   ============================================ */
+
+.domain-travel { padding: var(--section-gap) 0; border-bottom: var(--border-thin); }
+
+.domain-travel__grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: var(--sp-13);
+  align-items: center;
+}
+
+.domain-travel__media {
+  position: relative;
+  height: 560px;
+}
+.domain-travel__media-primary {
+  position: absolute;
+  top: 0; left: 0;
+  width: 82%;
+  height: 88%;
+  overflow: hidden;
+  border: var(--border-thin-strong);
+}
+.domain-travel__media-secondary {
+  position: absolute;
+  right: 0; bottom: 0;
+  width: 46%;
+  height: 46%;
+  overflow: hidden;
+  border: 4px solid var(--charcoal);
+  box-shadow: 0 0 0 1px var(--glass-20);
+}
+.domain-travel__media-primary img,
+.domain-travel__media-secondary img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .domain-travel__grid { grid-template-columns: 1fr; gap: var(--sp-10); }
+  .domain-travel__media { height: 420px; max-width: 460px; margin: 0 auto var(--sp-6); }
+}
+@media (max-width: 560px) {
+  .domain-travel__media { height: 340px; }
+  .domain-travel__media-secondary { width: 55%; height: 42%; }
+}
+
+/* ============================================
+   04 SPACE — cinematic full-bleed
+   ============================================ */
+
+.domain-space {
+  position: relative;
+  min-height: 860px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.domain-space__media { position: absolute; inset: 0; z-index: 0; }
+.domain-space__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+.domain-space__scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(4,6,14,0.55) 0%, rgba(4,6,14,0.65) 40%, rgba(4,6,14,0.92) 100%);
+}
+.domain-space__stars {
+  position: absolute; inset: 0;
+  background-image:
+    radial-gradient(1px 1px at 15% 25%, white, transparent),
+    radial-gradient(1px 1px at 80% 15%, white, transparent),
+    radial-gradient(1.5px 1.5px at 60% 70%, white, transparent),
+    radial-gradient(1px 1px at 30% 85%, white, transparent),
+    radial-gradient(1px 1px at 92% 60%, white, transparent),
+    radial-gradient(1.5px 1.5px at 45% 10%, white, transparent),
+    radial-gradient(1px 1px at 10% 55%, white, transparent);
+  opacity: 0.4;
+}
+.domain-space__inner { position: relative; z-index: 1; padding: var(--sp-20) 0; }
+.domain-space h2 { font-size: var(--fs-h1); margin-bottom: var(--sp-5); }
+.domain-space__lead {
+  font-family: var(--font-body);
+  color: #cbd5e1;
+  font-size: 20px;
+  max-width: 62ch;
+  line-height: 1.55;
+  margin-bottom: var(--sp-10);
+}
+.domain-space__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--sp-5);
+  margin-bottom: var(--sp-8);
+}
+.domain-space__item {
+  border: var(--border-thin-strong);
+  background: rgba(10,10,10,0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: var(--sp-5);
+}
+.domain-space__item h3 { font-size: 1.05rem; margin-bottom: var(--sp-3); }
+.domain-space__item p { color: var(--grey-medium-light); font-size: 0.88rem; line-height: 1.5; }
+.domain-space__note { color: var(--grey-medium-light); font-size: var(--fs-caption); font-style: italic; }
+
+@media (max-width: 900px) {
+  .domain-space { min-height: auto; }
+  .domain-space__grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 560px) {
+  .domain-space__grid { grid-template-columns: 1fr; }
+}
+
+/* ---- CTA ---- */
+.focus-cta { background: url('../Assets/our.png') no-repeat center center; background-size: cover; padding: var(--section-gap) 0; }
+.focus-cta__inner {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: var(--sp-8); flex-wrap: wrap;
+}
+.focus-cta__inner h2 { font-size: var(--fs-h1); max-width: 14ch; }

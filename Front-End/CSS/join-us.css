@@ -1,0 +1,89 @@
+/* ============================================
+   JOIN US PAGE
+   ============================================ */
+
+.join-open { background: url("../Assets/join-us-hero.png") center center / cover no-repeat; padding: 168px 0 var(--sp-10); border-bottom: var(--border-thin); }
+.join-open__title {
+  font-size: 90px;
+  text-transform: uppercase;
+  margin: var(--sp-5) 0 var(--sp-7);
+  max-width: 16ch;
+}
+
+.hero__headline-outline {
+  -webkit-text-stroke: 1.5px var(--white);
+  color: transparent;
+}
+
+.join-open__lead {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 24px;
+  line-height: 33.6px;
+  color: var(--grey-medium-light);
+  max-width: 54ch;
+}
+
+/* ---- Pathways ---- */
+.pathway { border-bottom: var(--border-thin); padding: var(--sp-13) 0; }
+.pathway--02, .pathway--04 { background: var(--black); }
+
+.pathway__inner {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: var(--sp-8);
+  align-items: start;
+}
+.pathway__idx {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--grey-steel);
+}
+.pathway__body h2 { color: #F8FAFC; font-family: "Plus Jakarta Sans", sans-serif; font-size: 48px; line-height: 57.6px; margin-bottom: var(--sp-4); }
+.pathway__lead {
+  font-family: "Inter" sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 32.5px;
+  max-width: 34ch;
+  margin-bottom: var(--sp-5);
+}
+.pathway__text {
+  color: #CBD5E1;
+  font-size: 20px;
+  max-width: 60ch;
+  line-height: 32.5px;
+  margin-bottom: var(--sp-6);
+}
+
+@media (max-width: 700px) {
+  .pathway__inner { grid-template-columns: 1fr; gap: var(--sp-4); }
+  .pathway__idx { font-size: 2.2rem; }
+}
+
+/* ---- Learn steps (vertical timeline) ---- */
+.learn-steps h2 { color: #F8FAFC; font-family: "Plus Jakarta Sans", sans-serif; font-size: 48px; line-height: 57.6px; margin: var(--sp-4) 0 var(--sp-10); max-width: 16ch; }
+.learn-steps__list {
+  position: relative;
+  padding-left: var(--sp-8);
+  border-left: var(--border-thin-strong);
+}
+.lstep { position: relative; padding-bottom: var(--sp-10); }
+.lstep:last-child { padding-bottom: 0; }
+.lstep__dot {
+  position: absolute;
+  left: calc(-1 * var(--sp-8) - 5px);
+  top: 4px;
+  width: 9px; height: 9px;
+  background: var(--white);
+  border-radius: 50%;
+}
+.lstep__idx { font-family: var(--font-display); color: var(--grey-medium-light); font-size: 0.85rem; }
+.lstep__body h3 { font-size: 24px; font-family: "Plus Jakarta Sans", sans-serif; line-height: 33.6px; font-weight: 600; margin: var(--sp-2) 0 var(--sp-3); }
+.lstep__body p { color: #CBD5E1; font-size: 20px; max-width: 56ch; line-height: 32.5px; }
+
+/* ---- CTA ---- */
+.join-cta { background: url("../Assets/join-us-cta.png") center center / cover no-repeat; padding: var(--section-gap) 0; text-align: center; }
+.join-cta__inner { display: flex; flex-direction: column; align-items: center; gap: var(--sp-5); }
+.join-cta__inner h2 { color: #F8FAFC; font-family: "Plus Jakarta Sans", sans-serif; font-size: 48px; line-height: 57.6px;; }
+.join-cta__inner p { color: #CBD5E1; font-size: 20px; line-height: 32.5px; }

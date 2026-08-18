@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blogs — FloLabs Innovations Group</title>
+<meta name="description" content="Notes on FloLabs Innovations Group's research and thinking across AI, robotics, education, healthcare, travel and space.">
+<meta property="og:title" content="Blogs — FloLabs Innovations Group">
+<meta property="og:description" content="FloLabs' research journal — notes on AI, robotics and the domains it explores.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://www.flolabsinnovations.com/blogs">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=TASA+Orbiter:wght@400;500;600;700;800&family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../CSS/tokens.css">
+<link rel="stylesheet" href="../CSS/base.css">
+<link rel="stylesheet" href="../CSS/Blogs.css">
+</head>
+<body data-page="blogs">
+<a href="#main" class="skip-link">Skip to content</a>
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="/index.html" class="logo" aria-label="FloLabs Innovations Group — Home">
+      <img src="../Assets/Today2.png" alt="FloLabs Innovations Group" class="logo__image">
+      <span class="logo__name" aria-hidden="true">
+        <span class="logo__name-main">FloLabs Innovations</span><span class="logo__group">Group</span>
+      </span>
+    </a>
+    <nav class="primary-nav" aria-label="Primary">
+      <ul class="primary-nav__list">
+        <li><a href="/index.html" class="primary-nav__link" data-nav="home">Home</a></li>
+        <li><a href="our-legacy.html" class="primary-nav__link" data-nav="legacy">Who We Are</a></li>
+        <li><a href="our-focus.html" class="primary-nav__link" data-nav="focus">Our Focus</a></li>
+        <li><a href="technologies.html" class="primary-nav__link" data-nav="tech">Technologies</a></li>
+        <li><a href="join-us.html" class="primary-nav__link" data-nav="join">Join Us</a></li>
+        <li><a href="blogs.html" class="primary-nav__link" data-nav="blogs">Blogs</a></li>
+        <li><a href="contact.html" class="primary-nav__link" data-nav="contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <a href="contact.html" class="btn btn-solid">Start a Conversation</a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<nav class="mobile-nav" aria-label="Mobile">
+  <div class="mobile-nav__top">
+    <a href="/index.html" class="logo" aria-label="FloLabs Innovations Group — Home">
+      <img src="../Assets/Today2.png" alt="FloLabs Innovations Group" class="logo__image">
+      <span class="logo__name" aria-hidden="true">
+        <span class="logo__name-main">FloLabs Innovations</span><span class="logo__group">Group</span>
+      </span>
+    </a>
+    <button class="mobile-nav__close nav-toggle" aria-label="Close menu" aria-expanded="true"><span></span><span></span><span></span></button>
+  </div>
+  <ul class="mobile-nav__list">
+    <li><a href="/index.html" class="mobile-nav__link"><span class="idx">01</span>Home</a></li>
+    <li><a href="our-legacy.html" class="mobile-nav__link"><span class="idx">02</span>Who We Are</a></li>
+    <li><a href="our-focus.html" class="mobile-nav__link"><span class="idx">03</span>Our Focus</a></li>
+    <li><a href="technologies.html" class="mobile-nav__link"><span class="idx">04</span>Technologies</a></li>
+    <li><a href="join-us.html" class="mobile-nav__link"><span class="idx">05</span>Join Us</a></li>
+    <li><a href="blogs.html" class="mobile-nav__link"><span class="idx">06</span>Blogs</a></li>
+    <li><a href="contact.html" class="mobile-nav__link"><span class="idx">07</span>Contact</a></li>
+  </ul>
+  <div class="mobile-nav__footer"><a href="contact.html" class="btn btn-solid">Start a Conversation</a></div>
+</nav>
+
+<main id="main">
+
+  <section class="blogs-open">
+    <div class="container-wide">
+      <p class="eyebrow reveal">Blogs</p>
+      <h1 class="blogs-open__title reveal">The Journal.</h1>
+      <p class="blogs-open__lead reveal">
+        Notes on how FloLabs researches, builds and thinks — organised by the same focus areas and
+        technology directions that shape the rest of this site. The journal is in development; here's
+        what it will cover first.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ CATEGORY FILTER — functional discovery UI ============ -->
+  <section class="section journal">
+    <div class="container-wide">
+      <div class="journal__filters reveal" role="group" aria-label="Filter topics by category">
+        <button class="filter-chip is-active" data-filter="all">All Topics</button>
+        <button class="filter-chip" data-filter="ai-robotics">AI &amp; Robotics</button>
+        <button class="filter-chip" data-filter="education">Education</button>
+        <button class="filter-chip" data-filter="healthcare">Healthcare</button>
+        <button class="filter-chip" data-filter="travel">Travel</button>
+        <button class="filter-chip" data-filter="space">Space</button>
+      </div>
+
+      <div class="journal__grid">
+        <article class="journal-card reveal" data-category="ai-robotics">
+          <span class="journal-card__status">Coming Soon</span>
+          <h3>Inside FloLabs' seven robotics research areas</h3>
+          <p>A closer look at autonomy, precision, human-robot interaction and responsible design.</p>
+          <span class="journal-card__tag tag tag--research">AI &amp; Robotics</span>
+        </article>
+        <article class="journal-card reveal" data-category="education">
+          <span class="journal-card__status">Coming Soon</span>
+          <h3>What "hands-on" means in an AI education programme</h3>
+          <p>Notes from the experiential learning model — ideation through product evolution.</p>
+          <span class="journal-card__tag tag">Education</span>
+        </article>
+        <article class="journal-card reveal" data-category="healthcare">
+          <span class="journal-card__status">Coming Soon</span>
+          <h3>Where healthcare AI research actually stands</h3>
+          <p>Separating early-stage exploration from claims of clinical deployment.</p>
+          <span class="journal-card__tag tag">Healthcare</span>
+        </article>
+        <article class="journal-card reveal" data-category="travel">
+          <span class="journal-card__status">Coming Soon</span>
+          <h3>Designing travel AI that adapts, not just plans</h3>
+          <p>Adaptive itineraries, real-time support, and what "personalisation" should mean.</p>
+          <span class="journal-card__tag tag">Travel</span>
+        </article>
+        <article class="journal-card reveal" data-category="space">
+          <span class="journal-card__status">Coming Soon</span>
+          <h3>Why a research collective thinks about space</h3>
+          <p>Frontier thinking as a driver of technology — not a departure from it.</p>
+          <span class="journal-card__tag tag">Space</span>
+        </article>
+        <article class="journal-card reveal" data-category="ai-robotics">
+          <span class="journal-card__status">Coming Soon</span>
+          <h3>Connected intelligence: from wearable data to guidance</h3>
+          <p>How CAIPO and MoodChanger turn device data into personalised insight.</p>
+          <span class="journal-card__tag tag tag--research">AI &amp; Robotics</span>
+        </article>
+      </div>
+
+      <p class="journal__empty" hidden>No topics in this category yet — check back soon.</p>
+    </div>
+  </section>
+
+  <!-- ============ NOTIFY / SUBSCRIBE ============ -->
+  <section class="journal-cta">
+    <div class="container-wide journal-cta__inner reveal">
+      <div>
+        <h2>Be first to read it.</h2>
+        <p>Leave your email and we'll let you know when the first dispatches publish.</p>
+      </div>
+      <form class="journal-cta__form" id="notify-form" novalidate>
+        <label for="notify-email" class="visually-hidden">Email address</label>
+        <input type="email" id="notify-email" name="email" placeholder="you@example.com" required autocomplete="email">
+        <button type="submit" class="btn btn-solid">Notify Me</button>
+      </form>
+      <p class="journal-cta__confirm" id="notify-confirm" role="status" aria-live="polite" hidden>Thanks — we'll be in touch when the journal launches.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container-wide">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><span class="logo__mark" aria-hidden="true"></span>FLOLABS</a>
+        <p>An AI and Robotics Research &amp; Development Collective exploring technology across education, healthcare, travel and space.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Site</h4>
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="our-legacy.html">Our Legacy</a></li>
+          <li><a href="our-focus.html">Our Focus</a></li>
+          <li><a href="technologies.html">Technologies</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Engage</h4>
+        <ul>
+          <li><a href="join-us.html">Join Us</a></li>
+          <li><a href="blogs.html">Blogs</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Focus Areas</h4>
+        <ul>
+          <li><a href="our-focus.html#education">Education</a></li>
+          <li><a href="our-focus.html#healthcare">Healthcare</a></li>
+          <li><a href="our-focus.html#travel">Travel</a></li>
+          <li><a href="our-focus.html#space">Space</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span data-year>2026</span> FloLabs Innovations Group.</p>
+      <div class="footer-legal"><a href="#">Privacy</a><a href="#">Terms</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="../JavaScript/main.js"></script>
+<script src="../JavaScript/blogs.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+/* ============================================
+   CONTACT PAGE
+   ============================================ */
+
+.contact-section { padding: 168px 0 var(--section-gap); min-height: 100vh; }
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: var(--sp-20);
+  align-items: start;
+}
+
+.contact-info__title { font-size: clamp(2.6rem, 6vw, 4.2rem); margin: var(--sp-5) 0 var(--sp-6); }
+.contact-info__lead { color: #CBD5E1; font-size: 20px; max-width: 46ch; line-height: 32.5px; margin-bottom: var(--sp-10); }
+
+.contact-steps { display: flex; flex-direction: column; gap: var(--sp-6); margin-bottom: var(--sp-10); }
+.contact-steps li { display: flex; gap: var(--sp-5); align-items: flex-start; }
+.contact-steps__num {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--grey-medium-light);
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  width: 2.4ch;
+}
+.contact-steps h3 { font-size: 1.05rem; margin-bottom: var(--sp-1); }
+.contact-steps p { color: var(--grey-medium-light); font-size: 0.9rem; }
+
+/* ---- Form panel ---- */
+.contact-panel {
+  border: var(--border-thin-strong);
+  padding: var(--sp-8);
+  background: var(--card-glass);
+}
+
+.field { margin-bottom: var(--sp-6); }
+.field label {
+  display: block;
+  font-size: var(--fs-caption);
+  color: var(--grey-medium-light);
+  margin-bottom: var(--sp-2);
+}
+.field input, .field select, .field textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: var(--border-thin-strong);
+  color: var(--white);
+  padding: var(--sp-3) 0;
+  font-size: var(--fs-label);
+  resize: vertical;
+}
+.field select {
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%23A3A3A3' stroke-width='1.4' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 4px center;
+}
+.field select option { background: var(--charcoal); color: var(--white); }
+.field input:focus, .field select:focus, .field textarea:focus {
+  outline: none;
+  border-bottom-color: var(--white);
+}
+
+.contact-panel__submit { width: 100%; justify-content: center; margin-top: var(--sp-2); }
+
+.field__error { color: var(--red-error); font-size: 0.85rem; margin-top: var(--sp-4); }
+
+.contact-panel__success { text-align: center; padding: var(--sp-10) 0; }
+.contact-panel__success h3 { font-size: 1.6rem; margin-bottom: var(--sp-3); }
+.contact-panel__success p { color: var(--grey-medium-light); }
+
+@media (max-width: 960px) {
+  .contact-grid { grid-template-columns: 1fr; gap: var(--sp-10); }
+}
+@media (max-width: 500px) {
+  .contact-panel { padding: var(--sp-6); }
+}

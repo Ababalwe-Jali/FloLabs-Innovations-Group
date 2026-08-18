@@ -1,0 +1,410 @@
+/* ============================================
+   TECHNOLOGIES PAGE
+   ============================================ */
+
+/* ---- Premium Technologies Hero ---- */
+.tech-hero {
+  background: url("../Assets/techologies-hero.png") center center / cover no-repeat;
+  position: relative;
+  padding: 168px 0 var(--sp-13);
+  border-bottom: var(--border-thin);
+  overflow: hidden;
+}
+.tech-hero__grid {
+  display: grid;
+  grid-template-columns: 1fr 0.85fr;
+  gap: var(--sp-13);
+  align-items: center;
+}
+.tech-hero__headline {
+  font-size: 90px;
+  text-transform: uppercase;
+  margin-top: var(--sp-5);
+  margin-bottom: var(--sp-6);
+  max-width: 14ch;
+}
+
+.hero__headline-outline {
+  -webkit-text-stroke: 1.5px var(--white);
+  color: transparent;
+}
+
+.tech-hero__lead {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 24px;
+  color: var(--grey-medium-light);
+  line-height: 33.6px;
+  max-width: 46ch;
+  margin-bottom: var(--sp-7);
+}
+.tech-hero__actions { display: flex; }
+
+/* ---- Hero visual: layered technology interface ---- */
+.tech-hero__visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1 / 1;
+  max-width: 460px;
+  margin: 0 auto;
+}
+.tvis {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.tvis__ring {
+  position: absolute;
+  top: 50%; left: 50%;
+  border: var(--border-thin);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.tvis__ring--outer { width: 92%; height: 92%; opacity: 0.6; }
+.tvis__ring--inner { width: 58%; height: 58%; opacity: 0.9; }
+.tvis__core {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 14px; height: 14px;
+  transform: translate(-50%, -50%);
+  border: 1px solid var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tvis__core-dot {
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--white);
+}
+.tvis__lines { position: absolute; inset: 0; width: 100%; height: 100%; }
+
+.tvis__panel {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: var(--sp-4) var(--sp-5);
+  border: var(--border-thin);
+  background: var(--card-glass, rgba(255,255,255,0.03));
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  min-width: 132px;
+  animation: tvis-float 7s ease-in-out infinite;
+}
+.tvis__panel-eyebrow { font-family: var(--font-display); font-size: 0.65rem; color: var(--grey-steel); }
+.tvis__panel-label { font-family: var(--font-display); font-weight: 700; font-size: 0.95rem; }
+.tvis__panel-sub { color: var(--grey-medium-light); font-size: 0.72rem; }
+
+.tvis__panel--a { top: 4%; left: 2%; animation-delay: 0s; }
+.tvis__panel--b { top: 0%; right: 0%; animation-delay: 1.4s; }
+.tvis__panel--c { bottom: 6%; left: 0%; animation-delay: 2.8s; }
+.tvis__panel--d { bottom: 0%; right: 4%; animation-delay: 4.2s; background: var(--white); color: var(--black); }
+.tvis__panel--d .tvis__panel-sub { color: rgba(0,0,0,0.6); }
+.tvis__panel--d .tvis__panel-eyebrow { color: rgba(0,0,0,0.5); }
+
+@keyframes tvis-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tvis__panel { animation: none; }
+}
+
+@media (max-width: 900px) {
+  .tech-hero { padding: 130px 0 var(--sp-10); }
+  .tech-hero__grid { grid-template-columns: 1fr; gap: var(--sp-8); }
+  .tech-hero__visual { max-width: 340px; }
+}
+
+/* ---- Technology discovery / filter ---- */
+.tech-filter {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--black);
+  border-bottom: var(--border-thin);
+}
+.tech-filter__inner {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  padding: var(--sp-5) 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.tech-filter__inner::-webkit-scrollbar { display: none; }
+
+.tech-filter__btn {
+  flex-shrink: 0;
+  padding: var(--sp-3) var(--sp-5);
+  border: var(--border-thin);
+  background: transparent;
+  color: var(--grey-medium-light);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out);
+}
+.tech-filter__btn:hover { color: var(--white); border-color: var(--glass-20); }
+.tech-filter__btn.is-active { background: var(--white); color: var(--black); border-color: var(--white); }
+
+.tech-filter__count {
+  margin-left: auto;
+  flex-shrink: 0;
+  color: var(--grey-steel);
+  font-size: var(--fs-caption);
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+@media (max-width: 700px) {
+  .tech-filter__count { display: none; }
+}
+
+/* ---- Technology showcase — staggered editorial rows ---- */
+.tech-showcase { padding-top: var(--section-gap); }
+.tech-showcase__head { margin-bottom: var(--sp-10); }
+.tech-showcase__head h2 {
+  color: #F8FAFC;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 48px;
+  line-height: 57.6px;
+  margin: var(--sp-4) 0 var(--sp-5);
+  max-width: 16ch;
+}
+.tech-showcase__intro { color: #CBD5E1; font-size: 20px; line-height: 32.5px; max-width: 60ch; }
+
+.tshow-list { display: flex; flex-direction: column; }
+
+.tshow-row {
+  border-top: var(--border-thin);
+  padding: var(--sp-13) 0;
+}
+.tshow-row:last-child { border-bottom: var(--border-thin); }
+
+.tshow-row__grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: var(--sp-13);
+  align-items: center;
+}
+.tshow-row--reverse .tshow-row__grid { grid-template-columns: 0.85fr 1.15fr; }
+.tshow-row--reverse .tshow-row__media { order: 2; }
+.tshow-row--reverse .tshow-row__info { order: 1; }
+
+.tshow-row__media {
+  position: relative;
+  aspect-ratio: 5 / 4;
+  overflow: hidden;
+  background: var(--card-glass, rgba(255,255,255,0.03));
+}
+.tshow-row__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.7s var(--ease-out);
+}
+.tshow-row:hover .tshow-row__img { transform: scale(1.045); }
+
+.tshow-row__index {
+  position: absolute;
+  top: var(--sp-5);
+  left: var(--sp-5);
+  z-index: 1;
+  padding: var(--sp-2) var(--sp-4);
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-20);
+  color: var(--white);
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+}
+
+.tshow-row__info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--sp-4);
+}
+.tshow-row__name {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 1.2;
+  color: #F8FAFC;
+}
+.tshow-row__desc {
+  color: var(--grey-medium-light);
+  font-size: 1.02rem;
+  line-height: 1.65;
+  max-width: 46ch;
+}
+.tshow-row__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  margin-top: var(--sp-2);
+  padding-top: var(--sp-4);
+  border-top: var(--border-thin);
+  width: 100%;
+  color: var(--white);
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  transition: gap var(--dur-fast) var(--ease-out);
+}
+.tshow-row__link svg { transition: transform var(--dur-fast) var(--ease-out); }
+.tshow-row:hover .tshow-row__link { gap: var(--sp-3); }
+.tshow-row:hover .tshow-row__link svg { transform: translate(3px, -3px); }
+
+/* Featured (first) entry — larger, more immersive, more whitespace */
+.tshow-row--featured {
+  border-top: none;
+  padding-top: 0;
+  padding-bottom: calc(var(--sp-13) * 1.3);
+}
+.tshow-row--featured .tshow-row__grid {
+  grid-template-columns: 1.35fr 0.65fr;
+  gap: var(--sp-13);
+}
+.tshow-row--featured .tshow-row__media { aspect-ratio: 16 / 11; }
+.tshow-row--featured .tshow-row__name { font-size: 44px; }
+.tshow-row--featured .tshow-row__desc { font-size: 1.1rem; max-width: 42ch; }
+
+.tshow-empty {
+  text-align: center;
+  color: var(--grey-medium-light);
+  padding: var(--sp-13) 0;
+}
+
+@media (max-width: 1100px) {
+  .tshow-row__grid,
+  .tshow-row--featured .tshow-row__grid { grid-template-columns: 1fr; gap: var(--sp-7); }
+  .tshow-row--reverse .tshow-row__media,
+  .tshow-row--reverse .tshow-row__info { order: initial; }
+  .tshow-row--featured .tshow-row__name { font-size: 34px; }
+}
+
+@media (max-width: 560px) {
+  .tshow-row { padding: var(--sp-10) 0; }
+  .tshow-row__name { font-size: 26px; }
+  .tshow-row__desc { font-size: 0.95rem; }
+}
+
+/* ---- Connected intelligence diagram ---- */
+.connected {
+  background: var(--black);
+  border-top: var(--border-thin);
+  border-bottom: var(--border-thin);
+  padding: var(--section-gap) 0;
+}
+.connected__heading { color: #F8FAFC; font-family: "Plus Jakarta Sans", sans-serif; font-size: 48px; line-height: 57.6px; max-width: 20ch; margin: var(--sp-5) 0 var(--sp-6); }
+.connected__text {
+  color: #CBD5E1;
+  font-size: 20px;
+  max-width: 68ch;
+  line-height: 32.5px;
+  margin-bottom: var(--sp-13);
+}
+
+.connected__diagram {
+  display: flex;
+  align-items: stretch;
+  gap: var(--sp-4);
+  overflow-x: auto;
+  padding-bottom: var(--sp-4);
+}
+.cnode {
+  flex: 1 0 180px;
+  border: var(--border-thin);
+  padding: var(--sp-6) var(--sp-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+.cnode--end { border-color: var(--white); background: var(--glass-06); }
+.cnode__label { font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; }
+.cnode__detail { color: var(--grey-medium-light); font-size: 0.82rem; line-height: 1.4; }
+.cnode-arrow {
+  display: flex;
+  align-items: center;
+  color: var(--grey-steel);
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  .connected__diagram { flex-direction: column; }
+  .cnode-arrow { transform: rotate(90deg); align-self: flex-start; margin-left: var(--sp-6); }
+}
+
+/* ---- Robotics research areas ---- */
+.robotics h2 { color: #F8FAFC; font-family: "Plus Jakarta Sans", sans-serif; font-size: 48px; line-height: 57.6px;; margin: var(--sp-4) 0 var(--sp-6); max-width: 18ch; }
+.robotics__intro { color: #CBD5E1; font-size: 20px; line-height: 32.5px; max-width: 60ch; margin-bottom: var(--sp-10); }
+
+.robotics__list { border-top: var(--border-thin-strong); }
+.robotics__row {
+  display: grid;
+  grid-template-columns: 80px 260px 1fr;
+  gap: var(--sp-8);
+  align-items: center;
+  padding: var(--sp-6) 0;
+  border-bottom: var(--border-thin);
+}
+.robotics__row--highlight { background: var(--glass-06); }
+.robotics__idx { font-family: var(--font-display); color: var(--grey-medium-light); }
+.robotics__row h3 { font-size: 1.15rem; }
+.robotics__row p { color: var(--grey-medium-light); font-size: 0.95rem; line-height: 1.5; }
+
+@media (max-width: 900px) {
+  .robotics__row { grid-template-columns: 1fr; gap: var(--sp-2); }
+}
+
+/* ---- Animal vocalization callout ---- */
+.av-callout__grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: var(--sp-13);
+  border-top: var(--border-thin-strong);
+  border-bottom: var(--border-thin-strong);
+  padding: var(--sp-8) 0;
+}
+.av-callout h2 { color: #F8FAFC; font-family: "Plus Jakarta Sans", sans-serif; font-size: 48px; line-height: 57.6px; margin-top: var(--sp-3); }
+.av-callout__grid p { color: #CBD5E1; font-size: 20px; line-height: 32.5px; }
+
+@media (max-width: 900px) {
+  .av-callout__grid { grid-template-columns: 1fr; gap: var(--sp-5); }
+}
+
+/* ---- Closing CTA ---- */
+.tech-cta {  background: url("../Assets/CTA.png") center center / cover no-repeat; padding: var(--section-gap) 0; }
+.tech-cta__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-8);
+  flex-wrap: wrap;
+  border-top: var(--border-thin-strong);
+  padding-top: var(--sp-10);
+}
+.tech-cta__text { max-width: 56ch; }
+.tech-cta__inner h2 {
+  color: #F8FAFC;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 48px;
+  line-height: 57.6px;
+  margin: var(--sp-3) 0 var(--sp-5);
+  max-width: 16ch;
+}
+.tech-cta__sub { color: var(--grey-medium-light); font-size: 1.05rem; line-height: 1.6; }
+
+@media (max-width: 700px) {
+  .tech-cta__inner { padding-top: var(--sp-7); }
+  .tech-cta__inner h2 { font-size: 32px; line-height: 1.25; }
+}
