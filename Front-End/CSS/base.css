@@ -107,7 +107,7 @@ select:focus-visible,
   padding: var(--sp-4) var(--sp-6);
   font-family: var(--font-body);
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 20px;
   border-radius: 8px;
   transition: background var(--dur-fast) var(--ease-out),
@@ -118,9 +118,8 @@ select:focus-visible,
 }
 
 .btn-solid {
-  background: var(--white);
-  color: var(--black);
-  border: 1px solid var(--white);
+  background: #00349B;
+  color: #fff;
 }
 .btn-solid:hover { background: var(--grey-light); transform: translateY(-1px); }
 .btn-solid:active { background: var(--grey-off); }
